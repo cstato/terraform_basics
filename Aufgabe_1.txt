@@ -1,0 +1,23 @@
+Folgende Ressourcen erstellen:
+
+Ressourcen Gruppe für ein virutelles Netzwerk:
+name:                   learning-vnt-rg
+location:               westeurope
+
+
+Virtuelles Netzwerk mit zwei Subnets und einem Tag:
+name:                   learning-vnet
+location                <RG Location>
+resource_group_name:    <RG Name>
+address_space:          10.0.0.0/16
+
+Subnet 1:
+name:                   subnet1
+address_prefix:         10.0.1.0/24
+
+Subnet 2:
+name:                   AzureBastionSubnet
+address_prefix:         10.0.2.0/24
+
+Tags:
+environment = dev

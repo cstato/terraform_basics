@@ -1,0 +1,19 @@
+Folgende Ressourcen erstellen:
+
+Public IP erstellen:
+name:                       learning-bastion-pip
+resource_group_name:        VM RG Name
+location:                   VM RG Location
+allocation_method:          Static
+sku:                        Standard
+
+
+Bastion Host erstellen:
+name:                       learning-bastion-host
+resource_group_name:        <VM RG Name>
+location:                   <VM RG Location>
+
+ip_configuration
+name:                       "configuration"
+subnet_id:                  <Bestehendes AzureBastionSubnet nutzen>
+public_ip_address_id:       <Erstellte public ip nutzen>

@@ -1,0 +1,13 @@
+Folgende Ressourcen erstellen:
+
+Ressourcen Gruppe für ein Storage Account:
+name:                   learning-vnt-rg
+location:               westeurope
+
+
+Storage Account erstellen:
+name:                       stoacc<random_id>
+resource_group_name:        <RG Name>
+location:                   <RG Location>
+account_tier:               Standard
+account_replication_type:   GRS
