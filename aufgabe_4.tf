@@ -7,6 +7,9 @@ resource "azurerm_public_ip" "bastion_pip" {
 }
 
 data "azurerm_subnet" "data_azureBastionSubnet" {
+  depends_on = [
+    azurerm_virtual_network.vnet
+  ]
   name                 = "AzureBastionSubnet"
   virtual_network_name = "learning-vnet-network"
   resource_group_name  = "learning-vnt-rg"

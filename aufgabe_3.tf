@@ -4,12 +4,18 @@ resource "azurerm_resource_group" "vm_rg" {
 }
 
 data "azurerm_subnet" "data_subnet1" {
+  depends_on = [
+    azurerm_virtual_network.vnet
+  ]
   name                 = "subnet1"
   virtual_network_name = "learning-vnet-network"
   resource_group_name  = "learning-vnt-rg"
 }
 
 resource "azurerm_network_interface" "vm_nic" {
+  depends_on = [
+    azurerm_virtual_network.vnet
+  ]
   name                = "nic-1"
   location            = azurerm_resource_group.vm_rg.location
   resource_group_name = azurerm_resource_group.vm_rg.name
