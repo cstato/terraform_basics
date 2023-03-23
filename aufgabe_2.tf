@@ -1,3 +1,4 @@
+/*
 resource "azurerm_resource_group" "sa_rg" {
   name     = "learning-sa-rg"
   location = "westeurope"
@@ -14,3 +15,4 @@ resource "azurerm_storage_account" "storage_account" {
   account_tier             = "Standard"
   account_replication_type = "GRS"
 }
+*/

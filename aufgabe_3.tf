@@ -1,3 +1,4 @@
+/*
 resource "azurerm_resource_group" "vm_rg" {
   name     = "learning-vm-rg"
   location = "westeurope"
@@ -55,3 +56,4 @@ resource "azurerm_windows_virtual_machine" "vm" {
     identity_ids = []
   }
 }
+*/

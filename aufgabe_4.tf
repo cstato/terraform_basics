@@ -1,3 +1,4 @@
+/*
 resource "azurerm_public_ip" "bastion_pip" {
   name                = "learning-bastion-pip"
   location            = azurerm_resource_group.vm_rg.location
@@ -26,3 +27,4 @@ resource "azurerm_bastion_host" "bastion_host" {
     public_ip_address_id = azurerm_public_ip.bastion_pip.id
   }
 }
+*/
